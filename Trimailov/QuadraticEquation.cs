@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ConsoleApp3
+namespace Trimailov
 {
-    class QuadraticEquation : LinearEquation
+    public class QuadraticEquation : LinearEquation
     {
-        public List<float> Solve(float a, float b, float c)
+        public new List<float> Solve(float a, float b, float c)
         {
             if (a == 0)
             {
