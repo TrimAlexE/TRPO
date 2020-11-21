@@ -12,7 +12,8 @@ namespace Trimailov
                 return base.Solve(b, c, 0);
             }
             float D = discriminant(a, b, c);
-            
+            MyLog.Log("Определено, что это квадратное уравнение.");
+
             if (D == 0)
             {
                 return X = new List<float>() { (float)(-b + Math.Sqrt(D)) / (2 * a) };
@@ -27,7 +28,7 @@ namespace Trimailov
             }
             if (D < 0)
             {
-                throw new Exception("Ошибка: уравнение не имеет решений.");
+                throw new TrimailovException("Ошибка: уравнение не имеет решений.");
             }
             return X;
         }

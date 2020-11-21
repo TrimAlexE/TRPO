@@ -10,8 +10,9 @@ namespace Trimailov
         {
             if (a == 0)
             {
-                throw new Exception("Определено, что такое уравнение не существует");
+                throw new TrimailovException("Определено, что такое уравнение не существует");
             }
+            MyLog.Log("Определено, что это линейное уравнение.");
             return X = new List<float>() { -b / a };
         }
     }
