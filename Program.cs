@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using Trimailov;
 
 namespace ConsoleApp3
@@ -7,6 +8,11 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
+            using (StreamReader sr = new StreamReader("version"))
+            {
+                MyLog.Log($"Версия программы {sr.ReadToEnd().Trim()}");
+            }
+            
             QuadraticEquation myQuadraticEquation = new QuadraticEquation();
 
             float a, b, c;
